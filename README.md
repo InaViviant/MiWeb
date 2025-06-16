@@ -42,17 +42,16 @@ Estoy comprometido con seguir creciendo en el área del desarrollo web, aprendie
 
 Podés ver el proyecto publicado en GitHub Pages:
 
-👉 [Ver online](https://tuusuario.github.io/)
+👉 [Ver online](https://inaviviant.github.io/MiWeb/)
 
-*(Reemplazá el link con tu URL real)*
 
 ---
 
 ## 📫 Contacto
 
-- 📧 Email: tuemail@gmail.com  
-- 💼 LinkedIn: [linkedin.com/in/tuperfil](https://linkedin.com/in/tuperfil)  
-- 💻 GitHub: [github.com/tuusuario](https://github.com/tuusuario)
+- 📧 Email: inakiviviant@gmail.com 
+- 💼 LinkedIn: [https://www.linkedin.com/in/iñaki-viviant-465ab72a5/](https://www.linkedin.com/in/iñaki-viviant-465ab72a5/)  
+- 💻 GitHub: [https://github.com/InaViviant?tab=repositories](https://github.com/InaViviant?tab=repositories)
 
 ---
 
