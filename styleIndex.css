@@ -1,3 +1,4 @@
+/* Google Fonts */
 body {
   font-family: 'Poppins', sans-serif;
   background: #f0f4f8;
@@ -89,4 +90,38 @@ footer {
   background: #0d1b2a;
   color: white;
   font-size: 0.9em;
+}
+
+/* -------- Responsive -------- */
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5em;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1em;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5em;
+    width: 100%;
+  }
+
+  nav a {
+    font-size: 1rem;
+    display: block;
+    padding: 0.5em 0;
+  }
+
+  .card {
+    padding: 1.5em;
+  }
+
+  .skills li {
+    font-size: 0.85em;
+    padding: 0.4em 0.9em;
+  }
 }
