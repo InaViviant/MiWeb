@@ -1,4 +1,92 @@
 body {
-    background-color: gray;
+  font-family: 'Poppins', sans-serif;
+  background: #f0f4f8;
+  margin: 0;
+  color: #333;
+  line-height: 1.6;
 }
 
+/* Contenedor general */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2em;
+}
+
+/* Header y navegación */
+header {
+  background: #0d1b2a;
+  color: white;
+  padding: 1em 0;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1em;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Secciones */
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 2em;
+  margin-bottom: 2em;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Skills */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  padding: 0;
+  list-style: none;
+}
+
+.skills li {
+  background: #e0e7ff;
+  color: #1e40af;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+/* Proyecto */
+.proyecto a {
+  display: inline-block;
+  margin-top: 0.5em;
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.proyecto a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2em 0;
+  background: #0d1b2a;
+  color: white;
+  font-size: 0.9em;
+}
