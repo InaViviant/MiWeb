@@ -38,7 +38,7 @@ Estoy enfocado en seguir creciendo dentro del mundo del desarrollo Front-End, ap
         <p>Este mismo sitio: un portafolio donde muestro quién soy, qué sé hacer y cómo contactarme.</p>
         <a href="https://github.com/InaViviant/MiWeb" target="_blank">Portafolio_Web</a>
       </div>
-      <div>
+      <div class="proyecto">
         <h3>💼 Proyecto Web</h3>
         <p>Proyecto de una web de venta de juegos, con HTML,CSS y JS (En proceso)</p>
         <a href="https://github.com/InaViviant/Proyecto_web" target="_blank">Proyecto_Web</a>
@@ -69,6 +69,31 @@ Estoy enfocado en seguir creciendo dentro del mundo del desarrollo Front-End, ap
   <footer>
     <p>© 2025 Iñaki Viviánt. Hecho con ❤️ y mucho café. (Sobre todo café) </p>
   </footer>
+
+  <!-- Botón scroll to top -->
+  <button class="scroll-to-top" id="scrollToTop">↑</button>
+
+  <script>
+    // Funcionalidad del botón scroll to top
+    const scrollToTopBtn = document.getElementById('scrollToTop');
+    
+    // Mostrar/ocultar botón basado en scroll
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        scrollToTopBtn.classList.add('show');
+      } else {
+        scrollToTopBtn.classList.remove('show');
+      }
+    });
+    
+    // Función para volver arriba
+    scrollToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
 
 </body>
 </html>
