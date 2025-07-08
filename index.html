@@ -68,6 +68,40 @@
       <p>🔗 <a href="https://www.linkedin.com/in/iñaki-viviant-465ab72a5/" target="_blank" rel="noopener noreferrer">Mi LinkedIn</a></p>
       <p>💻 <a href="https://github.com/InaViviant?tab=repositories" target="_blank" rel="noopener noreferrer">Mi GitHub</a></p>
     </section>
+
+    <div class="contact-form">
+          <h3>Envíame un Mensaje</h3>
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="nombre">Nombre *</label>
+              <input type="text" id="nombre" name="nombre" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="asunto">Asunto *</label>
+              <select id="asunto" name="asunto" required>
+                <option value="">Selecciona un asunto</option>
+                <option value="desarrollo-web">Desarrollo Web</option>
+                <option value="colaboracion">Colaboración</option>
+                <option value="consultoria">Consultoría</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="mensaje">Mensaje *</label>
+              <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Cuéntame sobre tu proyecto..."></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">Enviar Mensaje</button>
+          </form>
+        </div>
+      </div>
   </main>
 
   <footer>
