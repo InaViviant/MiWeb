@@ -295,16 +295,158 @@ footer {
   border-bottom-color: currentColor;
 }
 
-/* Loading state */
+/* Animacion de carga */
 .loading {
   opacity: 0;
   animation: fadeInUp 0.8s ease-out forwards;
 }
 
-/* Focus states for accessibility */
+/* Estado de enfoque */
 a:focus, button:focus {
   outline: 2px solid #60a5fa;
   outline-offset: 2px;
+}
+
+/* Enlaces de contacto */
+#contacto a {
+  transition: all 0.3s ease;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  color: #2563eb;
+}
+
+#contacto a:hover {
+  transform: translateY(-1px);
+  border-bottom-color: currentColor;
+}
+
+/* Contenedor de contacto */
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2em;
+  margin-top: 1.5em;
+}
+
+.contact-info h3,
+.contact-form h3 {
+  color: #0d1b2a;
+  margin-bottom: 1em;
+  font-size: 1.1em;
+}
+
+/* Formulario de contacto */
+.contact-form {
+  background: #f8fafc;
+  padding: 1.5em;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.form-group {
+  margin-bottom: 1.2em;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5em;
+  font-weight: 500;
+  color: #374151;
+  font-size: 0.95em;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75em;
+  border: 2px solid #e5e7eb;
+  border-radius: 6px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95em;
+  transition: all 0.3s ease;
+  background: white;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.1);
+}
+
+.form-group input.error,
+.form-group select.error,
+.form-group textarea.error {
+  border-color: #ef4444;
+  background: #fef2f2;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit-btn {
+  background: #0d1b2a;
+  color: white;
+  padding: 0.75em 2em;
+  border: none;
+  border-radius: 6px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: #1e3a5f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(13, 27, 42, 0.3);
+}
+
+.submit-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.submit-btn:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Mensajes del formulario */
+.form-message {
+  padding: 0.75em;
+  border-radius: 6px;
+  margin-bottom: 1em;
+  font-weight: 500;
+  animation: fadeInUp 0.3s ease-out;
+  font-size: 0.9em;
+}
+
+.form-message.success {
+  background: #dcfce7;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+}
+
+.form-message.error {
+  background: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+}
+
+.field-error {
+  color: #ef4444;
+  font-size: 0.85em;
+  margin-top: 0.25em;
+  animation: fadeInUp 0.2s ease-out;
 }
 
 /* -------- Responsive -------- */
