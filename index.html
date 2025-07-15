@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -7,7 +6,476 @@
   <title>Portafolio | Iñaki Viviánt</title>
   <meta name="description" content="Desarrollador Front-End en formación especializado en HTML, CSS, JavaScript y React. Conoce mis proyectos y habilidades.">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styleIndex.css" />
+  <style>
+/* Google Fonts */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f0f4f8;
+  margin: 0;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Animaciones de entrada */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Contenedor general */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2em;
+}
+
+/* Header y navegación */
+header {
+  background: #0d1b2a;
+  color: white;
+  padding: 1em 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  animation: fadeInLeft 1s ease-out;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-container h1 {
+  animation: bounce 2s infinite;
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1em;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 0.5em 0;
+}
+
+nav a:hover {
+  color: #60a5fa;
+  transform: translateY(-2px);
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #60a5fa;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Secciones */
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 2em;
+  margin-bottom: 2em;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 0.8s ease-out;
+  transition: all 0.3s ease;
+  transform: translateY(0);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Animación escalonada para las cards */
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+
+/* Skills */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  padding: 0;
+  list-style: none;
+}
+
+.skills li {
+  background: #e0e7ff;
+  color: #1e40af;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  transform: scale(1);
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.skills li:hover {
+  transform: scale(1.05) translateY(-2px);
+  background: #c7d2fe;
+  box-shadow: 0 4px 12px rgba(30, 64, 175, 0.2);
+}
+
+/* Animación escalonada para skills */
+.skills li:nth-child(1) { animation-delay: 0.1s; }
+.skills li:nth-child(2) { animation-delay: 0.2s; }
+.skills li:nth-child(3) { animation-delay: 0.3s; }
+.skills li:nth-child(4) { animation-delay: 0.4s; }
+.skills li:nth-child(5) { animation-delay: 0.5s; }
+.skills li:nth-child(6) { animation-delay: 0.6s; }
+.skills li:nth-child(7) { animation-delay: 0.7s; }
+.skills li:nth-child(8) { animation-delay: 0.8s; }
+
+/* Proyecto */
+.proyecto {
+  transition: all 0.3s ease;
+  padding: 1em;
+  border-radius: 8px;
+  margin-bottom: 1em;
+  border: 1px solid #e5e7eb;
+}
+
+.proyecto:hover {
+  background: #f8fafc;
+  transform: translateX(10px);
+  border-color: #60a5fa;
+}
+
+.proyecto h3 {
+  margin-top: 0;
+  color: #0d1b2a;
+}
+
+.proyecto a {
+  display: inline-block;
+  margin-top: 0.5em;
+  color: #2563eb;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.proyecto a:hover {
+  color: #1d4ed8;
+  transform: translateX(5px);
+}
+
+.proyecto a::before {
+  content: '→ ';
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.proyecto a:hover::before {
+  opacity: 1;
+}
+
+/* Botón scroll to top */
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background: #0d1b2a;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-to-top:hover {
+  background: #1e3a5f;
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.scroll-to-top:active {
+  transform: translateY(-1px) scale(1.05);
+}
+
+/* Mostrar el botón cuando se hace scroll */
+.scroll-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  animation: bounceIn 0.6s ease-out;
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2em 0;
+  background: #0d1b2a;
+  color: white;
+  font-size: 0.9em;
+  animation: fadeInUp 1s ease-out;
+}
+
+/* Enlaces de contacto */
+#contacto a {
+  transition: all 0.3s ease;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  color: #2563eb;
+}
+
+#contacto a:hover {
+  transform: translateY(-1px);
+  border-bottom-color: currentColor;
+}
+
+/* Animacion de carga */
+.loading {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.loading.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Estado de enfoque */
+a:focus, button:focus {
+  outline: 2px solid #60a5fa;
+  outline-offset: 2px;
+}
+
+/* Formulario de contacto */
+.card form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+  margin-top: 1em;
+}
+
+.card input,
+.card textarea {
+  padding: 0.8em 1em;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: #f8fafc;
+}
+
+.card input:focus,
+.card textarea:focus {
+  outline: none;
+  border-color: #60a5fa;
+  background: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(96, 165, 250, 0.2);
+}
+
+.card input:hover,
+.card textarea:hover {
+  border-color: #cbd5e1;
+  background: white;
+}
+
+.card textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.card button[type="submit"] {
+  padding: 0.9em 2em;
+  background: #0d1b2a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  transform: translateY(0);
+}
+
+.card button[type="submit"]:hover {
+  background: #1e3a5f;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(13, 27, 42, 0.3);
+}
+
+.card button[type="submit"]:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(13, 27, 42, 0.2);
+}
+
+.card button[type="submit"]:focus {
+  outline: 2px solid #60a5fa;
+  outline-offset: 2px;
+}
+
+/* -------- Responsive -------- */
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5em;
+  }
+  
+  /* Header NO estático en móvil */
+  header {
+    position: relative;
+    top: auto;
+  }
+  
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1em;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5em;
+    width: 100%;
+  }
+
+  nav a {
+    font-size: 1rem;
+    display: block;
+    padding: 0.5em 0;
+  }
+
+  .card {
+    padding: 1.5em;
+  }
+
+  .skills {
+    justify-content: center;
+  }
+
+  .skills li {
+    font-size: 0.85em;
+    padding: 0.4em 0.9em;
+  }
+
+  /* Botón scroll to top en móvil */
+  .scroll-to-top {
+    bottom: 15px;
+    right: 15px;
+    width: 45px;
+    height: 45px;
+    font-size: 16px;
+  }
+  
+  .card input,
+  .card textarea {
+    font-size: 0.9rem;
+    padding: 0.7em 0.9em;
+  }
+  
+  .card button[type="submit"] {
+    font-size: 0.9rem;
+    padding: 0.8em 1.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1em;
+  }
+  
+  .card {
+    padding: 1em;
+  }
+  
+  .card input,
+  .card textarea {
+    font-size: 0.85rem;
+    padding: 0.6em 0.8em;
+  }
+  
+  .card button[type="submit"] {
+    font-size: 0.85rem;
+    padding: 0.7em 1.2em;
+  }
+}
+  </style>
 </head>
 <body>
 
@@ -69,39 +537,16 @@
       <p>💻 <a href="https://github.com/InaViviant?tab=repositories" target="_blank" rel="noopener noreferrer">Mi GitHub</a></p>
     </section>
 
-    <div class="contact-form">
-          <h3>Envíame un Mensaje</h3>
-          <form id="contactForm">
-            <div class="form-group">
-              <label for="nombre">Nombre *</label>
-              <input type="text" id="nombre" name="nombre" required>
-            </div>
-            
-            <div class="form-group">
-              <label for="email">Email *</label>
-              <input type="email" id="email" name="email" required>
-            </div>
-            
-            <div class="form-group">
-              <label for="asunto">Asunto *</label>
-              <select id="asunto" name="asunto" required>
-                <option value="">Selecciona un asunto</option>
-                <option value="desarrollo-web">Desarrollo Web</option>
-                <option value="colaboracion">Colaboración</option>
-                <option value="consultoria">Consultoría</option>
-                <option value="otro">Otro</option>
-              </select>
-            </div>
-            
-            <div class="form-group">
-              <label for="mensaje">Mensaje *</label>
-              <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Cuéntame sobre tu proyecto..."></textarea>
-            </div>
-            
-            <button type="submit" class="submit-btn">Enviar Mensaje</button>
-          </form>
-        </div>
-      </div>
+    <section class="card loading">
+      <h2>📝 Envíame un mensaje</h2>
+      <form action="https://formspree.io/f/xqalzrwp" method="POST">
+        <input type="text" name="nombre" placeholder="Tu nombre" required>
+        <input type="email" name="email" placeholder="Tu email" required>
+        <textarea name="mensaje" rows="4" placeholder="Tu mensaje" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
   </main>
 
   <footer>
@@ -141,8 +586,7 @@
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
+          entry.target.classList.add('visible');
         }
       });
     }, observerOptions);

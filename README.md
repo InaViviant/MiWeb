@@ -34,7 +34,7 @@ Estoy comprometido con seguir creciendo en el área del desarrollo web, aprendie
 - HTML5
 - CSS3 (estilo personalizado)
 - Google Fonts (Roboto)
-- Diseño responsive (próximamente)
+- Diseño responsive 
 
 ---
 
